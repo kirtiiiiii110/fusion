@@ -16,8 +16,8 @@ contract Deploy is Script {
         vm.startBroadcast();
         EscrowFactory escrowFactory = new EscrowFactory(
             limitOrderProtocol,
-            IERC20(0x000000000000000000000000000000000000dEaD),
-            IERC20(0x000000000000000000000000000000000000dEaD),
+            IERC20(0x0000000000000000000000000000000000000001),
+            IERC20(0x0000000000000000000000000000000000000001),
             msg.sender,
             uint32(1800),
             uint32(1800)
@@ -25,7 +25,7 @@ contract Deploy is Script {
         Resolver resolverContract = new Resolver(escrowFactory, IOrderMixin(limitOrderProtocol), resolver);
         vm.stopBroadcast();
 
-        console.log(address(escrowFactory));
-        console.log(address(resolverContract));
+        console.log('EscrowFactory', address(escrowFactory));
+        console.log('Resolver', address(resolverContract));
     }
 }

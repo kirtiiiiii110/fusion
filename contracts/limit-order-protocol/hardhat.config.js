@@ -31,7 +31,7 @@ const { networks, etherscan } = networksConfig;
 console.log({ networks, etherscan });
 
 module.exports = {
-    etherscan,
+    // etherscan,
     tracer: {
         enableAllOpcodes: true,
     },

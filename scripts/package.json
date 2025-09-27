@@ -1,0 +1,15 @@
+{
+  "name": "scripts",
+  "module": "index.ts",
+  "scripts": {
+    "start": "node index.cjs"
+  },
+  "dependencies": {
+    "@1inch/byte-utils": "^3.1.0",
+    "@1inch/cross-chain-sdk": "^1.0.2",
+    "dotenv": "^17.2.2",
+    "ethers": "^6.15.0",
+    "inquirer": "8.2.6",
+    "starknet": "^7.6.4"
+  }
+}

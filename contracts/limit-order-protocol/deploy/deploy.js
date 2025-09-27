@@ -15,6 +15,8 @@ const deploy = async () => {
     const { deploy } = deployments;
     const { deployer } = await getNamedAccounts();
 
+    console.log({ deployer });
+
     const limitOrderProtocol = await deploy("LimitOrderProtocol", {
         from: deployer,
         args: [wethByNetwork[network.name]],
